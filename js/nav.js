@@ -1,27 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Cargar el navbar
-    fetch('./components/navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.body.insertAdjacentHTML('afterbegin', data);
-            initializeNavbar();
-            initializeMobileMenu();
-            initializeSearchModal();
-            addDynamicStyles();
-        })
-        .catch(error => console.error('Error loading navbar:', error));
-});
-
-function initializeNavbar() {
-    // Menú hamburguesa (versión simplificada que será reemplazada por initializeMobileMenu)
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    if (mobileMenuButton) {
-        const icon = mobileMenuButton.querySelector('i');
-        mobileMenuButton.addEventListener('click', function() {
-            if (icon) {
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-times');
-            }
         });
     }
 }
